@@ -1,0 +1,1394 @@
+Analysis & Synthesis report for deneme2
+Thu Jun 13 20:32:34 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod1
+ 14. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod2
+ 15. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod3
+ 16. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod4
+ 17. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod5
+ 18. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod6
+ 19. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod7
+ 20. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod8
+ 21. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod9
+ 22. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod10
+ 23. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod11
+ 24. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod12
+ 25. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod13
+ 26. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod14
+ 27. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod15
+ 28. Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod0
+ 29. Parameter Settings for Inferred Entity Instance: top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0
+ 30. Parameter Settings for Inferred Entity Instance: top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0
+ 31. Port Connectivity Checks: "top:top_inst|game_over_display:game_over_inst"
+ 32. Port Connectivity Checks: "top:top_inst|SSCDM:display"
+ 33. Port Connectivity Checks: "top:top_inst|game:square_inst"
+ 34. Port Connectivity Checks: "top:top_inst|enemy:enemy1"
+ 35. Port Connectivity Checks: "top:top_inst|FourBitRandomNumberGenerator:twobit"
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jun 13 20:32:34 2024      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; deneme2                                    ;
+; Top-level Entity Name           ; deneme2                                    ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 1214                                       ;
+; Total pins                      ; 99                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 28                                         ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; deneme2            ; deneme2            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; game.v                           ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/game.v                              ;         ;
+; FourBitRandomNumberGenerator.v   ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/FourBitRandomNumberGenerator.v      ;         ;
+; enemy.v                          ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/enemy.v                             ;         ;
+; spaceship_aci.v                  ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/spaceship_aci.v                     ;         ;
+; top.v                            ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/top.v                               ;         ;
+; deneme2.v                        ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/deneme2.v                           ;         ;
+; vga_sync.v                       ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/vga_sync.v                          ;         ;
+; clock_60Hz.v                     ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/clock_60Hz.v                        ;         ;
+; SSCDM.v                          ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/SSCDM.v                             ;         ;
+; game_over_display.v              ; yes             ; User Verilog HDL File        ; C:/Users/furka/Desktop/deneme2/game_over_display.v                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
+; db/lpm_divide_iho.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/lpm_divide_iho.tdf               ;         ;
+; db/abs_divider_obg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/abs_divider_obg.tdf              ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/alt_u_div_00f.tdf                ;         ;
+; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/lpm_abs_on9.tdf                  ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/lpm_abs_4p9.tdf                  ;         ;
+; db/lpm_divide_52m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/lpm_divide_52m.tdf               ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/sign_div_unsign_8kh.tdf          ;         ;
+; db/alt_u_div_mse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/alt_u_div_mse.tdf                ;         ;
+; db/lpm_divide_2am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/furka/Desktop/deneme2/db/lpm_divide_2am.tdf               ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 4219                                            ;
+;                                             ;                                                 ;
+; Combinational ALUT usage for logic          ; 7721                                            ;
+;     -- 7 input functions                    ; 6                                               ;
+;     -- 6 input functions                    ; 706                                             ;
+;     -- 5 input functions                    ; 480                                             ;
+;     -- 4 input functions                    ; 1161                                            ;
+;     -- <=3 input functions                  ; 5368                                            ;
+;                                             ;                                                 ;
+; Dedicated logic registers                   ; 1214                                            ;
+;                                             ;                                                 ;
+; I/O pins                                    ; 99                                              ;
+; Total DSP Blocks                            ; 28                                              ;
+; Maximum fan-out node                        ; top:top_inst|clock_60Hz:clock_60Hz_ins|clk_60Hz ;
+; Maximum fan-out                             ; 1098                                            ;
+; Total fan-out                               ; 29447                                           ;
+; Average fan-out                             ; 3.21                                            ;
++---------------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                    ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |deneme2                                     ; 7721 (1)          ; 1214 (0)     ; 0                 ; 28         ; 99   ; 0            ; |deneme2                                                                                                                                               ; work         ;
+;    |top:top_inst|                            ; 7720 (5)          ; 1214 (25)    ; 0                 ; 28         ; 0    ; 0            ; |deneme2|top:top_inst                                                                                                                                  ; work         ;
+;       |SSCDM:display|                        ; 14 (14)           ; 19 (19)      ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|SSCDM:display                                                                                                                    ; work         ;
+;       |clock_60Hz:clock_60Hz_ins|            ; 26 (26)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|clock_60Hz:clock_60Hz_ins                                                                                                        ; work         ;
+;       |game:square_inst|                     ; 7527 (4215)       ; 1113 (1113)  ; 0                 ; 28         ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst                                                                                                                 ; work         ;
+;          |lpm_divide:Mod0|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod0                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod0|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod0|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod0|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod0|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod10|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod10                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod10|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod10|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod10|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod10|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod11|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod11                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod11|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod11|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod11|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod11|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod12|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod12                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod12|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod12|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod12|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod12|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod13|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod13                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod13|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod13|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod13|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod13|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod14|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod14                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod14|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod14|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod14|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod14|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod15|                  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod15                                                                                                ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod15|lpm_divide_iho:auto_generated                                                                  ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod15|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                          ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod15|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                    ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod15|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                   ; work         ;
+;          |lpm_divide:Mod1|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod1                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod1|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod1|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod1|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod1|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod2|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod2                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod2|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod2|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod2|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod2|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod3|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod3                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod3|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod3|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod3|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod3|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod4|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod4                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod4|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod4|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod4|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod4|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod5|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod5                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod5|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod5|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod5|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod5|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod6|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod6                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod6|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod6|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod6|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod6|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod7|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod7                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod7|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod7|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod7|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod7|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod8|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod8                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod8|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod8|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod8|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod8|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;          |lpm_divide:Mod9|                   ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod9                                                                                                 ; work         ;
+;             |lpm_divide_iho:auto_generated|  ; 207 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod9|lpm_divide_iho:auto_generated                                                                   ; work         ;
+;                |abs_divider_obg:divider|     ; 207 (18)          ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod9|lpm_divide_iho:auto_generated|abs_divider_obg:divider                                           ; work         ;
+;                   |alt_u_div_00f:divider|    ; 179 (179)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod9|lpm_divide_iho:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider                     ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game:square_inst|lpm_divide:Mod9|lpm_divide_iho:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num                    ; work         ;
+;       |game_over_display:game_over_inst|     ; 115 (83)          ; 10 (10)      ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst                                                                                                 ; work         ;
+;          |lpm_divide:Div0|                   ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0                                                                                 ; work         ;
+;             |lpm_divide_2am:auto_generated|  ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0|lpm_divide_2am:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                   |alt_u_div_mse:divider|    ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; work         ;
+;          |lpm_divide:Mod0|                   ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0                                                                                 ; work         ;
+;             |lpm_divide_52m:auto_generated|  ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0|lpm_divide_52m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_8kh:divider| ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                   |alt_u_div_mse:divider|    ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; work         ;
+;       |spaceship_aci:aci|                    ; 7 (7)             ; 6 (6)        ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|spaceship_aci:aci                                                                                                                ; work         ;
+;       |vga_sync:vga_sync_inst|               ; 26 (26)           ; 20 (20)      ; 0                 ; 0          ; 0    ; 0            ; |deneme2|top:top_inst|vga_sync:vga_sync_inst                                                                                                           ; work         ;
++----------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary                                ;
++---------------------+-------------+---------------------+-------------------+
+; Statistic           ; Number Used ; Available per Block ; Maximum Available ;
++---------------------+-------------+---------------------+-------------------+
+; Independent 18x18   ; 14          ; 2.00                ; --                ;
+; Sum of two 18x18    ; 14          ; 1.00                ; --                ;
+; DSP Block           ; 28          ; --                  ; --                ;
+; DSP 18-bit Element  ; 42          ; 2.00                ; --                ;
+; Unsigned Multiplier ; 42          ; --                  ; --                ;
++---------------------+-------------+---------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                          ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                         ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; top:top_inst|game_over_display:game_over_inst|green[0..4]      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game_over_display:game_over_inst|blue[0..7]       ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|SSCDM:display|display1[1]                         ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|SSCDM:display|display5[1]                         ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|TARRET_X[9..31]                  ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|TARRET_X[7,8]                    ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|TARRET_Y[9..31]                  ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy12_Y_END[0]                 ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy12_Y_END[1,3]               ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy12_Y_END[5..7]              ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy12_Y_END[8]                 ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy12_Y_END[9..31]             ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy8_X[0..2]                   ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy8_X[3..5]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy8_X[6..8]                   ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy8_X[9..31]                  ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy4_Y[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy4_Y[1,2]                    ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy4_Y[3..7]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy4_Y[8]                      ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy4_Y[9..31]                  ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy0_X[0..2]                   ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy0_X[3..5]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy0_X[6..8]                   ; Stuck at VCC due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy0_X[9..31]                  ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game_over_display:game_over_inst|red[0..4,6,7]    ; Merged with top:top_inst|game_over_display:game_over_inst|red[5]           ;
+; top:top_inst|game_over_display:game_over_inst|green[5..7]      ; Merged with top:top_inst|game_over_display:game_over_inst|red[5]           ;
+; top:top_inst|game:square_inst|TARRET_Y[5..7]                   ; Merged with top:top_inst|game:square_inst|TARRET_Y[8]                      ;
+; top:top_inst|game:square_inst|enemy12_Y_END[4]                 ; Merged with top:top_inst|game:square_inst|enemy12_Y_END[2]                 ;
+; top:top_inst|game:square_inst|count_enemy_0[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_0[10]                ;
+; top:top_inst|game:square_inst|count_enemy_1[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_1[10]                ;
+; top:top_inst|game:square_inst|count_enemy_2[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_2[10]                ;
+; top:top_inst|game:square_inst|count_enemy_3[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_3[10]                ;
+; top:top_inst|game:square_inst|count_enemy_4[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_4[10]                ;
+; top:top_inst|game:square_inst|count_enemy_5[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_5[10]                ;
+; top:top_inst|game:square_inst|count_enemy_6[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_6[10]                ;
+; top:top_inst|game:square_inst|count_enemy_7[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_7[10]                ;
+; top:top_inst|game:square_inst|count_enemy_8[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_8[10]                ;
+; top:top_inst|game:square_inst|count_enemy_9[8,9,11..31]        ; Merged with top:top_inst|game:square_inst|count_enemy_9[10]                ;
+; top:top_inst|game:square_inst|count_enemy_10[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_10[10]               ;
+; top:top_inst|game:square_inst|count_enemy_11[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_11[10]               ;
+; top:top_inst|game:square_inst|count_enemy_12[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_12[10]               ;
+; top:top_inst|game:square_inst|count_enemy_13[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_13[10]               ;
+; top:top_inst|game:square_inst|count_enemy_14[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_14[10]               ;
+; top:top_inst|game:square_inst|count_enemy_15[8,9,11..31]       ; Merged with top:top_inst|game:square_inst|count_enemy_15[10]               ;
+; top:top_inst|game:square_inst|red[1..7]                        ; Merged with top:top_inst|game:square_inst|red[0]                           ;
+; top:top_inst|game:square_inst|green[1..7]                      ; Merged with top:top_inst|game:square_inst|green[0]                         ;
+; top:top_inst|game:square_inst|blue[1..7]                       ; Merged with top:top_inst|game:square_inst|blue[0]                          ;
+; top:top_inst|game:square_inst|enemy15_Y[0]                     ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy11_X[0]                     ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy9_Y[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy7_Y[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy5_X[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy3_X[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy1_Y[0]                      ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy0_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy1_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy3_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy5_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy6_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy7_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy9_can[1]                    ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy10_can[1]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy11_can[1]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy13_can[1]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy14_can[1]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game:square_inst|enemy15_can[1]                   ; Stuck at GND due to stuck port data_in                                     ;
+; top:top_inst|game_over_display:game_over_inst|char_rom_addr[8] ; Merged with top:top_inst|game_over_display:game_over_inst|char_rom_addr[9] ;
+; Total Number of Removed Registers = 612                        ;                                                                            ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1214  ;
+; Number of registers using Synchronous Clear  ; 923   ;
+; Number of registers using Synchronous Load   ; 298   ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 979   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Inverted Register Statistics                               ;
++--------------------------------------------------+---------+
+; Inverted Register                                ; Fan out ;
++--------------------------------------------------+---------+
+; top:top_inst|game:square_inst|enemy4_X[8]        ; 5       ;
+; top:top_inst|game:square_inst|enemy4_X[9]        ; 6       ;
+; top:top_inst|game:square_inst|enemy4_X[7]        ; 5       ;
+; top:top_inst|game:square_inst|enemy4_X[2]        ; 5       ;
+; top:top_inst|game:square_inst|enemy7_X[9]        ; 7       ;
+; top:top_inst|game:square_inst|enemy7_X[0]        ; 6       ;
+; top:top_inst|game:square_inst|enemy7_X[1]        ; 6       ;
+; top:top_inst|game:square_inst|enemy7_X[4]        ; 6       ;
+; top:top_inst|game:square_inst|enemy7_X[5]        ; 7       ;
+; top:top_inst|game:square_inst|enemy7_X[2]        ; 8       ;
+; top:top_inst|game:square_inst|enemy7_X[3]        ; 7       ;
+; top:top_inst|game:square_inst|enemy14_X[8]       ; 8       ;
+; top:top_inst|game:square_inst|enemy14_X[1]       ; 6       ;
+; top:top_inst|game:square_inst|enemy14_X[2]       ; 8       ;
+; top:top_inst|game:square_inst|enemy14_X[6]       ; 7       ;
+; top:top_inst|game:square_inst|enemy14_X[7]       ; 7       ;
+; top:top_inst|game:square_inst|enemy5_X[9]        ; 7       ;
+; top:top_inst|game:square_inst|enemy5_X[6]        ; 8       ;
+; top:top_inst|game:square_inst|enemy5_X[7]        ; 7       ;
+; top:top_inst|game:square_inst|enemy5_X[4]        ; 6       ;
+; top:top_inst|game:square_inst|enemy6_X[9]        ; 5       ;
+; top:top_inst|game:square_inst|enemy6_X[7]        ; 6       ;
+; top:top_inst|game:square_inst|enemy6_X[4]        ; 5       ;
+; top:top_inst|game:square_inst|enemy6_X[5]        ; 5       ;
+; top:top_inst|game:square_inst|enemy6_X[1]        ; 6       ;
+; top:top_inst|game:square_inst|enemy6_X[2]        ; 6       ;
+; top:top_inst|game:square_inst|enemy12_X_START[3] ; 4       ;
+; top:top_inst|game:square_inst|enemy12_X_START[1] ; 4       ;
+; top:top_inst|game:square_inst|enemy9_X[2]        ; 7       ;
+; top:top_inst|game:square_inst|enemy9_X[6]        ; 6       ;
+; top:top_inst|game:square_inst|enemy9_X[7]        ; 6       ;
+; top:top_inst|game:square_inst|enemy9_X[8]        ; 7       ;
+; top:top_inst|game:square_inst|enemy9_X[0]        ; 5       ;
+; top:top_inst|game:square_inst|enemy9_X[1]        ; 5       ;
+; top:top_inst|game:square_inst|enemy10_X[0]       ; 4       ;
+; top:top_inst|game:square_inst|enemy10_X[1]       ; 4       ;
+; top:top_inst|game:square_inst|enemy10_X[2]       ; 5       ;
+; top:top_inst|game:square_inst|enemy10_X[6]       ; 5       ;
+; top:top_inst|game:square_inst|enemy10_X[7]       ; 5       ;
+; top:top_inst|game:square_inst|enemy10_X[8]       ; 5       ;
+; top:top_inst|game:square_inst|enemy0_Y[3]        ; 6       ;
+; top:top_inst|game:square_inst|enemy0_Y[1]        ; 6       ;
+; top:top_inst|game:square_inst|enemy8_Y[9]        ; 6       ;
+; top:top_inst|game:square_inst|enemy8_Y[2]        ; 5       ;
+; top:top_inst|game:square_inst|enemy8_Y[3]        ; 4       ;
+; top:top_inst|game:square_inst|enemy2_X[9]        ; 8       ;
+; top:top_inst|game:square_inst|enemy2_X[7]        ; 9       ;
+; top:top_inst|game:square_inst|enemy2_X[4]        ; 6       ;
+; top:top_inst|game:square_inst|enemy2_X[5]        ; 7       ;
+; top:top_inst|game:square_inst|enemy2_X[1]        ; 7       ;
+; top:top_inst|game:square_inst|enemy2_X[2]        ; 8       ;
+; top:top_inst|game:square_inst|enemy1_Y[3]        ; 7       ;
+; top:top_inst|game:square_inst|enemy13_X[8]       ; 8       ;
+; top:top_inst|game:square_inst|enemy13_X[2]       ; 7       ;
+; top:top_inst|game:square_inst|enemy13_X[0]       ; 6       ;
+; top:top_inst|game:square_inst|enemy13_X[1]       ; 6       ;
+; top:top_inst|game:square_inst|enemy13_X[6]       ; 7       ;
+; top:top_inst|game:square_inst|enemy13_X[7]       ; 7       ;
+; top:top_inst|game:square_inst|enemy3_X[9]        ; 7       ;
+; top:top_inst|game:square_inst|enemy3_X[6]        ; 8       ;
+; top:top_inst|game:square_inst|enemy3_X[7]        ; 7       ;
+; top:top_inst|game:square_inst|enemy3_X[4]        ; 6       ;
+; top:top_inst|game:square_inst|enemy15_X[8]       ; 8       ;
+; top:top_inst|game:square_inst|enemy15_X[7]       ; 9       ;
+; top:top_inst|game:square_inst|enemy15_X[6]       ; 8       ;
+; top:top_inst|game:square_inst|enemy15_X[1]       ; 6       ;
+; top:top_inst|game:square_inst|enemy15_X[2]       ; 8       ;
+; top:top_inst|game:square_inst|enemy14_X[0]       ; 5       ;
+; top:top_inst|game:square_inst|enemy6_X[0]        ; 4       ;
+; top:top_inst|game:square_inst|enemy12_X_END[2]   ; 5       ;
+; top:top_inst|game:square_inst|enemy12_X_END[4]   ; 5       ;
+; top:top_inst|game:square_inst|enemy15_X[0]       ; 5       ;
+; top:top_inst|game:square_inst|enemy1_X[5]        ; 6       ;
+; top:top_inst|game:square_inst|enemy1_X[0]        ; 5       ;
+; top:top_inst|game:square_inst|enemy1_X[1]        ; 5       ;
+; top:top_inst|game:square_inst|enemy1_X[2]        ; 6       ;
+; top:top_inst|game:square_inst|enemy1_X[3]        ; 5       ;
+; top:top_inst|game:square_inst|enemy1_X[4]        ; 5       ;
+; top:top_inst|game:square_inst|enemy1_X[9]        ; 6       ;
+; top:top_inst|game:square_inst|enemy2_X[0]        ; 6       ;
+; top:top_inst|game:square_inst|enemy1_Y[1]        ; 6       ;
+; top:top_inst|game:square_inst|enemy2_Y[2]        ; 4       ;
+; top:top_inst|game:square_inst|enemy2_Y[4]        ; 4       ;
+; top:top_inst|game:square_inst|enemy3_Y[6]        ; 3       ;
+; top:top_inst|game:square_inst|enemy3_Y[5]        ; 3       ;
+; top:top_inst|game:square_inst|enemy3_Y[4]        ; 3       ;
+; top:top_inst|game:square_inst|enemy3_Y[3]        ; 3       ;
+; top:top_inst|game:square_inst|enemy15_Y[1]       ; 4       ;
+; top:top_inst|game:square_inst|enemy15_Y[3]       ; 3       ;
+; top:top_inst|game:square_inst|enemy13_Y[2]       ; 4       ;
+; top:top_inst|game:square_inst|enemy13_Y[3]       ; 3       ;
+; top:top_inst|game:square_inst|enemy13_Y[9]       ; 5       ;
+; top:top_inst|game:square_inst|enemy14_Y[1]       ; 3       ;
+; top:top_inst|game:square_inst|enemy14_Y[3]       ; 3       ;
+; top:top_inst|game:square_inst|enemy5_Y[2]        ; 4       ;
+; top:top_inst|game:square_inst|enemy5_Y[1]        ; 3       ;
+; top:top_inst|game:square_inst|enemy5_Y[7]        ; 3       ;
+; top:top_inst|game:square_inst|enemy5_Y[8]        ; 4       ;
+; top:top_inst|game:square_inst|enemy7_Y[2]        ; 5       ;
+; top:top_inst|game:square_inst|enemy7_Y[8]        ; 4       ;
+; Total number of inverted registers = 123*        ;         ;
++--------------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|points[4]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |deneme2|top:top_inst|game_over_display:game_over_inst|char_rom_addr[7] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_0[0]                 ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy1_X[11]                     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |deneme2|top:top_inst|spaceship_aci:aci|angle[3]                        ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 0 LEs                ; 165 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy2_Y[27]                     ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 0 LEs                ; 165 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy3_Y[11]                     ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 0 LEs                ; 165 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy5_Y[26]                     ;
+; 5:1                ; 51 bits   ; 153 LEs       ; 0 LEs                ; 153 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy6_Y[15]                     ;
+; 5:1                ; 50 bits   ; 150 LEs       ; 0 LEs                ; 150 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy7_Y[24]                     ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 110 LEs              ; 55 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy9_Y[28]                     ;
+; 5:1                ; 56 bits   ; 168 LEs       ; 112 LEs              ; 56 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy10_Y[28]                    ;
+; 5:1                ; 59 bits   ; 177 LEs       ; 118 LEs              ; 59 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy11_Y[16]                    ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 110 LEs              ; 55 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy13_X[29]                    ;
+; 5:1                ; 56 bits   ; 168 LEs       ; 112 LEs              ; 56 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy14_Y[25]                    ;
+; 5:1                ; 55 bits   ; 165 LEs       ; 110 LEs              ; 55 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy15_Y[17]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy4_can[0]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy8_can[1]                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_1[5]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_2[3]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_3[3]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_4[1]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_5[3]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_6[4]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_7[7]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_8[10]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_9[3]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_10[6]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_11[1]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_12[1]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_13[4]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_14[6]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|count_enemy_15[7]                ;
+; 6:1                ; 29 bits   ; 116 LEs       ; 29 LEs               ; 87 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy0_Y[4]                      ;
+; 6:1                ; 29 bits   ; 116 LEs       ; 29 LEs               ; 87 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy1_Y[26]                     ;
+; 6:1                ; 27 bits   ; 108 LEs       ; 54 LEs               ; 54 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy4_X[3]                      ;
+; 6:1                ; 28 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy8_Y[16]                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy12_X_END[0]                 ;
+; 6:1                ; 58 bits   ; 232 LEs       ; 58 LEs               ; 174 LEs                ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy12_X_START[9]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy2_can[1]                    ;
+; 35:1               ; 7 bits    ; 161 LEs       ; 56 LEs               ; 105 LEs                ; Yes        ; |deneme2|top:top_inst|SSCDM:display|display0[6]                         ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 28 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|green[0]                         ;
+; 35:1               ; 3 bits    ; 69 LEs        ; 0 LEs                ; 69 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|anlik_dusman_sayisi[2]           ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy1_X[1]                      ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 18 LEs               ; 9 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy2_X[2]                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy3_Y[3]                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy5_Y[8]                      ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy6_Y[3]                      ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy7_X[2]                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy9_X[0]                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy10_Y[3]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy11_Y[8]                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy13_X[6]                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy14_X[1]                     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy15_Y[3]                     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy0_Y[1]                      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy4_X[9]                      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy8_Y[9]                      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |deneme2|top:top_inst|game:square_inst|enemy12_X_START[3]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |deneme2|top:top_inst|game:square_inst|points                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod4 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod5 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod6 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod7 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod8 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod9 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod10 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod11 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod12 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod13 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod14 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod15 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game:square_inst|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                 ;
++------------------------+----------------+------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                              ;
+; LPM_WIDTHD             ; 9              ; Untyped                                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                              ;
+; CBXI_PARAMETER         ; lpm_divide_iho ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                       ;
++------------------------+----------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_52m ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                 ;
++------------------------+----------------+----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                              ;
+; CBXI_PARAMETER         ; lpm_divide_2am ; Untyped                                                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                       ;
++------------------------+----------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top_inst|game_over_display:game_over_inst"                                                                                                                                    ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                          ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; points ; Input ; Warning  ; Input port expression (6 bits) is wider than the input port (5 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top_inst|SSCDM:display"                                                                                                                                                           ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; number     ; Input ; Warning  ; Input port expression (6 bits) is wider than the input port (5 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; shoot_mode ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "shoot_mode[2..2]" will be connected to GND.                               ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top_inst|game:square_inst"                                                                                                                         ;
++-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                           ;
++-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; rand4_bit ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "rand4_bit[3..1]" will be connected to GND. ;
+; points[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                               ;
++-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top_inst|enemy:enemy1"                                                                                                                                                               ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; spawn_angle ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top_inst|FourBitRandomNumberGenerator:twobit"                                                                                                                            ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rand_4bit ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (16 bits) it drives.  The 12 most-significant bit(s) in the port expression will be connected to GND. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Jun 13 20:32:23 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off deneme2 -c deneme2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file game.v
+    Info (12023): Found entity 1: game
+Info (12021): Found 1 design units, including 1 entities, in source file fourbitrandomnumbergenerator.v
+    Info (12023): Found entity 1: FourBitRandomNumberGenerator
+Info (12021): Found 1 design units, including 1 entities, in source file enemy.v
+    Info (12023): Found entity 1: enemy
+Info (12021): Found 1 design units, including 1 entities, in source file spaceship_aci.v
+    Info (12023): Found entity 1: spaceship_aci
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file deneme2.v
+    Info (12023): Found entity 1: deneme2
+Info (12021): Found 1 design units, including 1 entities, in source file vga_sync.v
+    Info (12023): Found entity 1: vga_sync
+Info (12021): Found 1 design units, including 1 entities, in source file clock_60hz.v
+    Info (12023): Found entity 1: clock_60Hz
+Info (12021): Found 1 design units, including 1 entities, in source file sscdm.v
+    Info (12023): Found entity 1: SSCDM
+Info (12021): Found 1 design units, including 1 entities, in source file game_over_display.v
+    Info (12023): Found entity 1: game_over_display
+Warning (10236): Verilog HDL Implicit Net warning at top.v(80): created implicit net for "rand4_bit"
+Info (12127): Elaborating entity "deneme2" for the top level hierarchy
+Warning (10034): Output port "LEDR[9..3]" at deneme2.v(20) has no driver
+Info (12128): Elaborating entity "top" for hierarchy "top:top_inst"
+Info (12128): Elaborating entity "clock_60Hz" for hierarchy "top:top_inst|clock_60Hz:clock_60Hz_ins"
+Warning (10230): Verilog HDL assignment warning at clock_60Hz.v(13): truncated value with size 32 to match size of target (20)
+Info (12128): Elaborating entity "FourBitRandomNumberGenerator" for hierarchy "top:top_inst|FourBitRandomNumberGenerator:twobit"
+Info (12128): Elaborating entity "enemy" for hierarchy "top:top_inst|enemy:enemy1"
+Info (12128): Elaborating entity "vga_sync" for hierarchy "top:top_inst|vga_sync:vga_sync_inst"
+Warning (10230): Verilog HDL assignment warning at vga_sync.v(27): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.v(31): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.v(38): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at vga_sync.v(41): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "game" for hierarchy "top:top_inst|game:square_inst"
+Warning (10036): Verilog HDL or VHDL warning at game.v(30): object "point0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(31): object "point1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(32): object "point2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(33): object "point3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(34): object "point4" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(35): object "point5" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(36): object "point6" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(37): object "point7" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(38): object "point8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(39): object "point9" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(40): object "point10" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(41): object "point11" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(42): object "point12" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(43): object "point13" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(44): object "point14" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.v(45): object "point15" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at game.v(248): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(252): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(256): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(265): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(285): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(289): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(293): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(302): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(320): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(324): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(329): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(338): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(351): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(355): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(360): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(369): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(381): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(384): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(388): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(396): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(413): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(417): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(422): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(431): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(443): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(447): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(452): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(461): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(474): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(478): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(483): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(492): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(505): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(509): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(512): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(522): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(539): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(543): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(548): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(557): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(571): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(575): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(580): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(589): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(602): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(606): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(610): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(620): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(631): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(635): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(639): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(649): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(666): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(670): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(675): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(684): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(696): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(700): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(705): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(714): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(726): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at game.v(730): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at game.v(735): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at game.v(744): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "spaceship_aci" for hierarchy "top:top_inst|spaceship_aci:aci"
+Warning (10230): Verilog HDL assignment warning at spaceship_aci.v(35): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at spaceship_aci.v(43): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "SSCDM" for hierarchy "top:top_inst|SSCDM:display"
+Warning (10762): Verilog HDL Case Statement warning at SSCDM.v(76): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at SSCDM.v(93): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at SSCDM.v(110): can't check case statement for completeness because the case expression has too many possible states
+Info (12128): Elaborating entity "game_over_display" for hierarchy "top:top_inst|game_over_display:game_over_inst"
+Warning (10230): Verilog HDL assignment warning at game_over_display.v(207): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at game_over_display.v(208): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at game_over_display.v(211): truncated value with size 5 to match size of target (4)
+Warning (10030): Net "font_rom.data_a" at game_over_display.v(12) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "font_rom.waddr_a" at game_over_display.v(12) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "font_rom.we_a" at game_over_display.v(12) has no driver or initial value, using a default initial value '0'
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[15]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[14]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[13]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[12]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[11]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[10]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[9]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[8]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[7]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[6]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[5]" is missing source, defaulting to GND
+    Warning (12110): Net "top:top_inst|rand_4bit[4]" is missing source, defaulting to GND
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/furka/Desktop/deneme2/db/deneme2.ram0_game_over_display_979dbc44.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (278001): Inferred 18 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod4"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod5"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod6"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod7"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod8"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod9"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod10"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod11"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod12"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod13"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod14"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod15"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game:square_inst|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game_over_display:game_over_inst|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "top:top_inst|game_over_display:game_over_inst|Div0"
+Info (12130): Elaborated megafunction instantiation "top:top_inst|game:square_inst|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "top:top_inst|game:square_inst|lpm_divide:Mod1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_iho.tdf
+    Info (12023): Found entity 1: lpm_divide_iho
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_obg.tdf
+    Info (12023): Found entity 1: abs_divider_obg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_on9.tdf
+    Info (12023): Found entity 1: lpm_abs_on9
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9
+Info (12130): Elaborated megafunction instantiation "top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "top:top_inst|game_over_display:game_over_inst|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_52m.tdf
+    Info (12023): Found entity 1: lpm_divide_52m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mse.tdf
+    Info (12023): Found entity 1: alt_u_div_mse
+Info (12130): Elaborated megafunction instantiation "top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "top:top_inst|game_over_display:game_over_inst|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2am.tdf
+    Info (12023): Found entity 1: lpm_divide_2am
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/furka/Desktop/deneme2/deneme2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50"
+    Warning (15610): No output dependent on input pin "CLOCK3_50"
+    Warning (15610): No output dependent on input pin "CLOCK4_50"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+Info (21057): Implemented 7886 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 81 output pins
+    Info (21061): Implemented 7759 logic cells
+    Info (21062): Implemented 28 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 160 warnings
+    Info: Peak virtual memory: 4751 megabytes
+    Info: Processing ended: Thu Jun 13 20:32:34 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/furka/Desktop/deneme2/deneme2.map.smsg.
+
+

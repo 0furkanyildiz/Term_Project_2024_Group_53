@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\furka\Desktop\deneme2\simulation\qsim
+vdeneme2
+!i10b 1
+!s100 __<B<Rz831N0H327]cX2_1
+I1iF2k^8=IJ0YS2^z_cf3J0
+VU>0UYPZ^Eic5dQl]>?S^W0
+Z1 dC:\Users\furka\Desktop\deneme2\simulation\qsim
+w1718107585
+Z2 8deneme2.vo
+Z3 Fdeneme2.vo
+L0 31
+Z4 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1718108589.449000
+!s107 deneme2.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|deneme2.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

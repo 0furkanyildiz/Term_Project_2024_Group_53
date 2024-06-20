@@ -1,0 +1,45 @@
+module square(
+    input clk_i,
+    input rst_i,
+    input rotate_i,
+    input [9:0] h_cnt,
+    input [9:0] v_cnt,
+    output reg [3:0] color_o
+);
+
+localparam SQUARE_SIZE = 36;
+localparam CENTER_X = 320;
+localparam CENTER_Y = 240;
+localparam ANGLE_STEP = 22.5;
+
+reg [8:0] angle; // Using a fixed-point representation for the angle
+
+wire signed [9:0] x_rot, y_rot;
+wire signed [9:0] x_shifted, y_shifted;
+
+assign x_shifted = h_cnt - CENTER_X;
+assign y_shifted = v_cnt - CENTER_Y;
+
+// Rotation formula: x_rot = x * cos(angle) - y * sin(angle)
+//                   y_rot = x * sin(angle) + y * cos(angle)
+assign x_rot = x_shifted * $cos(angle * 3.141592653589793 / 180.0) - y_shifted * $sin(angle * 3.141592653589793 / 180.0);
+assign y_rot = x_shifted * $sin(angle * 3.141592653589793 / 180.0) + y_shifted * $cos(angle * 3.141592653589793 / 180.0);
+
+always @(posedge clk_i or posedge rst_i) begin
+    if (rst_i) begin
+        angle <= 0;
+    end else if (rotate_i) begin
+        angle <= angle + ANGLE_STEP;
+    end
+end
+
+always @(*) begin
+    if ((x_rot > -SQUARE_SIZE/2) && (x_rot < SQUARE_SIZE/2) &&
+        (y_rot > -SQUARE_SIZE/2) && (y_rot < SQUARE_SIZE/2)) begin
+        color_o = 4'b1111; // White color
+    end else begin
+        color_o = 4'b0000; // Black color
+    end
+end
+
+endmodule

@@ -1,0 +1,46 @@
+module top(
+    input clk,
+    input rst,
+    input [0:0] key, // Assuming key[0] is used for rotation
+    output [3:0] vga_r,
+    output [3:0] vga_g,
+    output [3:0] vga_b,
+    output vga_hs,
+    output vga_vs
+);
+
+wire hsync, vsync, inActiveArea;
+wire [4:0] v_cntr_mod32;
+wire [9:0] h_cnt, v_cnt;
+wire [3:0] color;
+
+assign vga_hs = hsync;
+assign vga_vs = vsync;
+assign vga_r = (inActiveArea) ? color : 4'b0000;
+assign vga_g = (inActiveArea) ? color : 4'b0000;
+assign vga_b = (inActiveArea) ? color : 4'b0000;
+
+vga_sync vga_sync_inst (
+    .clk_i(clk),
+    .rst_i(rst),
+    .hsync_o(hsync),
+    .vsync_o(vsync),
+    .inActiveArea_o(inActiveArea),
+    .inActiveAreaMUX_o(),
+    .screen_start_o(),
+    .v_cntr_mod32_o(v_cntr_mod32)
+);
+
+assign h_cnt = vga_sync_inst.H_cntr;
+assign v_cnt = vga_sync_inst.V_cntr;
+
+square square_inst (
+    .clk_i(clk),
+    .rst_i(rst),
+    .rotate_i(~key[0]),
+    .h_cnt(h_cnt),
+    .v_cnt(v_cnt),
+    .color_o(color)
+);
+
+endmodule
